@@ -6,7 +6,6 @@ import Testimonial2 from "./sections/Testimonial2";
 import Services2 from "./sections/Services2";
 import CallToAction1 from "./sections/CallToAction1";
 import Pricing1 from "./sections/Pricing1";
-// import Contact1 from "./sections/Contact1";
 import Footer1 from "./sections/Footer1";
 import TopBar2 from "./sections/TopBar2";
 
@@ -24,7 +23,6 @@ const Landing2 = () => {
       <Services2 />
       <CallToAction1 bg="./assets/images/home-bg-black.png" />
       <Pricing1 />
-      {/* <Contact1 /> */}
       <Footer1 />
     </div>
   );

@@ -4,7 +4,6 @@ import { debounce, classList } from "../../utils";
 
 import { Icon, IconButton } from "@mui/material";
 
-import { NavLink } from "react-router-dom";
 import ScrollTo from "../common/ScrollTo";
 
 const TopBar2 = () => {
@@ -56,9 +55,6 @@ const TopBar2 = () => {
         </div>
         <ul className="navigation">
           <li>
-            <NavLink to="/demos">Demos</NavLink>
-          </li>
-          <li>
             <ScrollTo to="intro2" onScroll={close}>
               Home
             </ScrollTo>
@@ -79,7 +75,7 @@ const TopBar2 = () => {
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="contact1" onScroll={close}>
+            <ScrollTo to="footer1" onScroll={close}>
               Contact
             </ScrollTo>
           </li>
@@ -87,8 +83,8 @@ const TopBar2 = () => {
         <div className="m-auto" />
         <ul className="navigation">
           <li>
-            <a href="/dashboard">
-              <Icon className="mr-4">person</Icon> My Account
+            <a href="/admin/" target="_self">
+              <Icon className="mr-4">person</Icon> Admin
             </a>
           </li>
         </ul>

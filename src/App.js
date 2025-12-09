@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Route,
   Routes,
@@ -26,6 +27,13 @@ import GlobalCss from "./styles/jss/GlobalCss";
 import Landing2 from "./home/Landing2";
 
 function App() {
+  // Redirect to Flutter admin if URL starts with /admin
+  useEffect(() => {
+    if (window.location.pathname.startsWith('/admin')) {
+      window.location.href = '/admin/index.html';
+    }
+  }, []);
+
   return (
     <ThemeProvider theme={Theme}>
       {variableStyles()}
