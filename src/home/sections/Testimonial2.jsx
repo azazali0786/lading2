@@ -1,7 +1,5 @@
 import React from "react";
-
 import { Card, CardContent, Avatar } from "@mui/material";
-
 import Carousel from "../common/Carousel";
 
 const Testimonial1 = () => {
@@ -10,33 +8,37 @@ const Testimonial1 = () => {
       companyLogoUrl: "./assets/images/mock-logo-1.png",
       user: {
         imageUrl: "./assets/images/face-1.jpg",
-        name: "John Doe",
-        designation: "Product Manager",
+        name: "Rahul Verma",
+        designation: "Tyre Dealer",
       },
+      review: `Romsons ensures timely delivery and genuine tyres every time. Their service has made our dealership operations smooth and reliable.`,
     },
     {
       companyLogoUrl: "./assets/images/mock-logo-2.png",
       user: {
         imageUrl: "./assets/images/face-2.jpg",
-        name: "Adam Smith",
-        designation: "CEO",
+        name: "Amit Sharma",
+        designation: "Retail Partner",
       },
+      review: `The product quality from CEAT, Maxxis, and Bedrock is excellent. We always receive fresh stock with full support from the team.`,
     },
     {
       companyLogoUrl: "./assets/images/mock-logo-3.png",
       user: {
         imageUrl: "./assets/images/face-3.jpg",
-        name: "John White",
-        designation: "Software Engineer",
+        name: "Deepak Singh",
+        designation: "Distributor",
       },
+      review: `A dependable distribution partner with fast claim support and transparent communication. Working with them has boosted our customer trust.`,
     },
     {
       companyLogoUrl: "./assets/images/mock-logo-4.png",
       user: {
         imageUrl: "./assets/images/face-4.jpg",
-        name: "Jessica Hiche",
-        designation: "CEO",
+        name: "Vikram Chauhan",
+        designation: "Dealer Network Partner",
       },
+      review: `Strong supply chain, genuine products, and excellent cooperation. Romsons Enterprises has been a reliable partner for our growth.`,
     },
   ];
 
@@ -44,10 +46,10 @@ const Testimonial1 = () => {
     <div className="section" id="testimonial2">
       <div className="container">
         <div className="section__header">
-          <h2>What our customers says</h2>
+          <h2>What Our Customers Say</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-            unde inventore molestias ab adipisci eius nisi placeat at.
+            Our dealer partners trust us for consistent supply, genuine
+            products, and smooth distribution across every segment we serve.
           </p>
         </div>
 
@@ -55,16 +57,13 @@ const Testimonial1 = () => {
           {testimonialList.map((testimonial, index) => (
             <Card className="px-6 card w-full h-full" key={index}>
               <CardContent className="flex-column justify-between min-h-full">
+                
                 <div className="mb-6 mt-4">
                   <img src={testimonial.companyLogoUrl} alt="logo" />
                 </div>
 
                 <p className="mt-0 mb-16 text-16">
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Fugit modi voluptas vero iusto fuga quos totam eius, atis
-                  magnam tempora doloribus ducimus dolorem elit. Fugit modi
-                  voluptas vero iusto fuga quos totam eius Sapiente, quia
-                  tempora."
+                  "{testimonial.review}"
                 </p>
 
                 <div className="flex flex-wrap items-center">
@@ -79,6 +78,7 @@ const Testimonial1 = () => {
                     <p className="m-0">{testimonial.user.designation}</p>
                   </div>
                 </div>
+
               </CardContent>
             </Card>
           ))}

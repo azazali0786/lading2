@@ -1,170 +1,79 @@
-  
-import React, { useState } from "react";
-import {
-  Switch,
-  FormControlLabel,
-  Grid,
-  Card,
-  CardContent,
-  Button,
-  Divider,
-} from "@mui/material";
-import { makeStyles } from '@mui/styles';
-
+import React from "react";
+import { Grid, Card, CardContent, Icon } from "@mui/material";
 import clsx from "clsx";
+import { makeStyles } from "@mui/styles";
 
-const useStyles = makeStyles(({ palette, ...theme }) => ({
+const useStyles = makeStyles(() => ({
   card: {
-    "& .card-header": {
-      background: "rgba(0, 0, 0, 0.024)",
+    borderTop: "2px solid black",
+    transition: "0.3s ease",
+    "& .icon": {
+      fontSize: 56,
+      color: "#444",
+      transition: "0.3s ease",
     },
-    "& .card-header-highlighted": {
-      background: "rgba(var(--primary),1)",
-      "& span": {
-        color: "#fff",
+    "&:hover": {
+      borderTop: "2px solid rgba(var(--primary),1)",
+      transform: "translateY(-4px)",
+      "& .icon": {
+        color: "rgba(var(--primary),1)",
       },
     },
   },
 }));
 
-const Pricing1 = () => {
-  const [state, setState] = useState({
-    switchToggled: false,
-    plan: "Mo",
-    off: 10,
-  });
-
+const DetailsSection = () => {
   const classes = useStyles();
 
-  const pricingList = [
+  const detailList = [
     {
-      title: "Developer",
-      subtitle: "For New Developer",
-      price: "Free",
-      allowedOfferIndexList: [0, 1, 2],
+      icon: "inventory_2",
+      title: "Wide Product Range",
+      text: "Motorcycle, scooter, three-wheeler, car, LMV & LCV tyres available in multiple sizes and patterns.",
     },
     {
-      title: "Starter",
-      subtitle: "For Professional Developer",
-      price: 30,
-      allowedOfferIndexList: [0, 1, 2, 3],
+      icon: "local_shipping",
+      title: "Fast Delivery",
+      text: "Quick dispatch, reliable logistics, and consistent availability for all partner dealers.",
     },
     {
-      title: "Business",
-      subtitle: "For Small Businesses",
-      price: 60,
-      allowedOfferIndexList: [0, 1, 2, 3, 4],
+      icon: "verified",
+      title: "Quality Assurance",
+      text: "Only genuine products from trusted brands like CEAT, Maxxis, and Bedrock.",
     },
     {
-      title: "Enterprise",
-      subtitle: "For Large companies",
-      price: 160,
-      allowedOfferIndexList: [0, 1, 2, 3, 4, 5],
+      icon: "support",
+      title: "Dealer-Friendly Service",
+      text: "Easy communication, transparent process, and full support including claim settlement.",
     },
   ];
-
-  const offerList = [
-    "10GB of Bandwidth",
-    "Max 50 connection",
-    "512MB RAM",
-    "Unlimited access",
-    "Unlimited User",
-    "Data analytics",
-  ];
-
-  const getPriceList = () => {
-    let { switchToggled, off } = state;
-
-    if (switchToggled) {
-      return [...pricingList].map((item) => {
-        let plan = { ...item };
-        let { price } = plan;
-
-        if (price !== "Free") {
-          price = price * 12;
-          price = Math.round(price - (price * off) / 100);
-        }
-        plan.price = price;
-        return plan;
-      });
-    }
-    return pricingList;
-  };
-
-  const handleSwitchChange = () => {
-    let { switchToggled, plan } = state;
-    switchToggled = !switchToggled;
-    switchToggled ? (plan = "Yr") : (plan = "Mo");
-    setState({ ...state, switchToggled, plan });
-  };
 
   return (
-    <div className="section section-pricing1" id="pricing1">
+    <div className="section" id="details">
       <div className="container">
-        <div className="mb-6">
-          <h2>Choose a Plan</h2>
-          <FormControlLabel
-            control={
-              <Switch
-                color="primary"
-                checked={state.switchState}
-                onChange={handleSwitchChange}
-              />
-            }
-            label="Get up to 10% discount annually"
-          />
+        <div className="section__header">
+          <h2>What We Offer</h2>
+          <p>
+            A complete solution for tyre dealers — from product availability to business support.
+          </p>
         </div>
 
-        <Grid container spacing={2}>
-          {getPriceList().map((plan) => {
-            let { title, subtitle, price, allowedOfferIndexList } = plan;
-
-            return (
-              <Grid item lg={3} md={3} sm={6} xs={12} key={title}>
-                <Card className={clsx("text-center card", classes.card)}>
-                  <div
-                    className={clsx({
-                      "card-header flex-column items-center p-3": true,
-                      "card-header-highlighted": title === "Starter",
-                    })}
-                  >
-                    <span className="text-16">{title}</span>
-                    <span className="text-small">{subtitle}</span>
-                  </div>
-                  <Divider className="mb-2" />
-                  <CardContent className="pricing1__card-content">
-                    <h1 className="mt-0 mb-4 text-32">
-                      {typeof price == "number"
-                        ? `$ ${price} /${state.plan}`
-                        : "Free"}
-                    </h1>
-
-                    {offerList.map((offer, index) => (
-                      <div
-                        key={index}
-                        className={clsx({
-                          "px-3 py-2": true,
-                          "text-muted": !allowedOfferIndexList.includes(index),
-                        })}
-                      >
-                        {offer}
-                      </div>
-                    ))}
-
-                    <div className="text-center mt-4">
-                      <Button color="secondary" variant="contained">
-                        Choose
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Grid>
-            );
-          })}
+        <Grid container spacing={3}>
+          {detailList.map((item, index) => (
+            <Grid item lg={3} md={3} sm={6} xs={12} key={index}>
+              <Card className={clsx("card h-full p-4", classes.card)}>
+                <CardContent className="text-center">
+                  <Icon className="icon mb-3">{item.icon}</Icon>
+                  <h3 className="text-20 font-bold">{item.title}</h3>
+                  <p className="text-muted">{item.text}</p>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
         </Grid>
       </div>
     </div>
   );
 };
 
-export default Pricing1;
+export default DetailsSection;

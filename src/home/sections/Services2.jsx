@@ -1,8 +1,6 @@
 import React from "react";
-
-import { Button, Icon, Card, CardContent } from "@mui/material";
-import { makeStyles } from '@mui/styles';
-
+import { Icon, Card, CardContent } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import Carousel from "../common/Carousel";
 import clsx from "clsx";
 
@@ -17,7 +15,7 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
       borderTop: "2px solid rgba(var(--primary), 1)",
       "& .icon": {
         color: "rgba(var(--primary),1)",
-      },
+      }, 
     },
   },
 }));
@@ -27,34 +25,34 @@ const Services2 = () => {
 
   const serviceList = [
     {
-      icon: "dashboard",
-      title: "Business Application",
+      icon: "local_shipping",
+      title: "Tyre Distribution",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+        "Fast and reliable supply of CEAT, Maxxis, and Bedrock tyres across Western Uttar Pradesh.",
     },
     {
-      icon: "perm_data_setting",
-      title: "Custom System Integration",
+      icon: "store",
+      title: "Dealer Support",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+        "We provide complete assistance to our 200+ dealer network with stock, pricing, and product updates.",
     },
     {
-      icon: "storage",
-      title: "Database Administration",
+      icon: "verified",
+      title: "Claim Settlement",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+        "Transparent and hassle-free claim support to ensure customer satisfaction and long-term trust.",
     },
     {
-      icon: "stay_primary_portrait",
-      title: "Custom Mobile Application",
+      icon: "inventory_2",
+      title: "Wide Product Range",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+        "Motorcycle, Scooter, Three-Wheeler, Car, LMV & LCV tyres available in multiple sizes and patterns.",
     },
     {
-      icon: "person",
-      title: "Management Application",
+      icon: "handshake",
+      title: "Partnership & Branding",
       text:
-        "Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.",
+        "Strong partnerships with leading tyre brands enabling consistent quality and business growth.",
     },
   ];
 
@@ -64,8 +62,8 @@ const Services2 = () => {
         <div className="section__header">
           <h2>Our Services</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-            unde inventore molestias ab adipisci eius nisi placeat at.
+            We provide reliable tyre distribution, fast delivery, and complete
+            dealer support to ensure smooth operations across all segments.
           </p>
         </div>
 
@@ -80,9 +78,9 @@ const Services2 = () => {
                   <h3 className="font-light text-24">{service.title}</h3>
                   <p>{service.text}</p>
                 </div>
-                <div className="pt-4">
-                  <Button>READ MORE</Button>
-                </div>
+                {/* <div className="pt-4">
+                  READ MORE
+                </div> */}
               </CardContent>
             </Card>
           ))}

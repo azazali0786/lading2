@@ -57,14 +57,13 @@ const Intro2 = () => {
       <div className="container">
         <div className="text-center">
           <div className="text-22 mb-6 text-secondary">
-            Build More; Sell More;
+            Reliable Tyres. Smooth Distribution;
           </div>
           <h1 className={clsx("text-48 mb-6", classes.title)}>
-            Marketing Automation Redefined
+            Romsons Enterprises – Building Trust on Every Mile
           </h1>
           <p className="max-w-550 mx-auto mb-6 text-inherit">
-            The most poerfull marketing automation platform you have ever used.
-            No hidden charge, pay as you use!
+            Smooth Distribution of Quality Tyres Across Western Uttar Pradesh!
           </p>
           <div>
             <Button
@@ -74,14 +73,14 @@ const Intro2 = () => {
               aria-label="Buy"
             >
               <Icon className="mr-4">flight_takeoff</Icon>
-              Start 7 day trial
+              Choose Your Tyres
             </Button>
           </div>
         </div>
         <div className={classes.product}>
           <img
             className="w-full"
-            src="./assets/images/screenshots/landing-intro.png"
+            src="./assets/images/screenshots/img.jpeg"
             alt=""
           />
         </div>

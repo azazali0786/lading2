@@ -60,8 +60,8 @@ const TopBar2 = () => {
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="portfoli2" onScroll={close}>
-              Works
+            <ScrollTo to="partners" onScroll={close}>
+              Partners
             </ScrollTo>
           </li>
           <li>
@@ -70,8 +70,8 @@ const TopBar2 = () => {
             </ScrollTo>
           </li>
           <li>
-            <ScrollTo to="pricing1" onScroll={close}>
-              Pricing
+            <ScrollTo to="details" onScroll={close}>
+              Details
             </ScrollTo>
           </li>
           <li>

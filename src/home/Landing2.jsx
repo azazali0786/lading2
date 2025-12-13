@@ -19,8 +19,8 @@ const Landing2 = () => {
       <TopBar2 />
       <Intro2 />
       <Portfolio2 />
-      <Testimonial2 />
       <Services2 />
+      <Testimonial2 />
       <CallToAction1 bg="./assets/images/home-bg-black.png" />
       <Pricing1 />
       <Footer1 />
