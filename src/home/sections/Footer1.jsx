@@ -35,7 +35,7 @@ const Footer1 = () => {
                 We focus on quality products, fast delivery, and strong dealer support.
               </p>
               <Button variant="contained" color="secondary">
-                <a href="mailto:azazwinner786@gmail.com">
+                <a href="mailto:support@nsityre.com">
                       contact us
                     </a>
               </Button>
