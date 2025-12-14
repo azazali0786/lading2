@@ -9,8 +9,15 @@
 
   <title>NSI Admin Panel</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/nsi_logo.png" />
+  <!-- Favicon (absolute path + cache-bust to avoid service worker / browser cache issues) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/admin/assets/images/nsi_logo.png?v=2" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/admin/assets/images/nsi_logo.png?v=2" />
+  <link rel="shortcut icon" href="/admin/assets/images/nsi_logo.png?v=2" />
+  <link rel="apple-touch-icon" href="/admin/assets/images/nsi_logo.png?v=2" />
+  <meta name="msapplication-TileImage" content="/admin/assets/images/nsi_logo.png?v=2" />
+  <!-- Also add root-path fallbacks if site is served without /admin base -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/nsi_logo.png?v=2" />
+  <link rel="shortcut icon" href="/assets/images/nsi_logo.png?v=2" />
 
   <!-- Manifest -->
   <link rel="manifest" href="manifest.json">

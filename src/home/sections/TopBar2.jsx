@@ -51,7 +51,7 @@ const TopBar2 = () => {
     >
       <div className="container header-container">
         <div className="brand">
-          <img src="./assets/images/react-logo.svg" alt="" />
+          <img src="./assets/images/nsi_logo.png" alt="NSI" />
         </div>
         <ul className="navigation">
           <li>

@@ -57,7 +57,7 @@ const Intro2 = () => {
       <div className="container">
         <div className="text-center">
           <div className="text-22 mb-6 text-secondary">
-            Reliable Tyres. Smooth Distribution;
+            Delivering Tyres. On Time. Every Time.
           </div>
           <h1 className={clsx("text-48 mb-6", classes.title)}>
             Romsons Enterprises – Building Trust on Every Mile

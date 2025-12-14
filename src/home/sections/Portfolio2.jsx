@@ -36,7 +36,7 @@ const Portfolio2 = () => {
         <div className="section__header">
           <h2>Our Partners</h2>
           <p>
-            We collaborate with leading tyre brands to ensure trusted quality,
+            We are in distribution with leading tyre brands to ensure trusted quality,
             smooth distribution, and reliable support for our entire dealer
             network.
           </p>
